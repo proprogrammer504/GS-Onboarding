@@ -40,7 +40,6 @@ class MainCommand(BaseSQLModel, table=True):
             return self
         else:
             raise ValueError()
-        return self
 
 
 class Command(BaseSQLModel, table=True):
