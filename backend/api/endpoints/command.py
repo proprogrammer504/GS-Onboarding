@@ -16,7 +16,7 @@ def get_commands(db: Session = Depends(get_db)):
     """
     Gets all the items
 
-    :return: Returns a list of T
+    :return: Returns a list of commands
     """
     query = select(Command)
     items = db.exec(query).all()

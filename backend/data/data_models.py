@@ -39,7 +39,7 @@ class MainCommand(BaseSQLModel, table=True):
         elif self.params and self.format and len(list(self.params.split(","))) == len(list(self.params.split(","))):
             return self
         else:
-            raise ValueError()
+            raise ValueError("Params is None") if self.params is None else ValueError("Format is None")
 
 
 class Command(BaseSQLModel, table=True):
