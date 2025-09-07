@@ -25,7 +25,7 @@ class LoggerMiddleware(BaseHTTPMiddleware):
         params = None
 
         try:
-            if request.method == "POST":
+            if request.method != "GET":
                 request_body = await request.json()
         except Exception as e:
             logger.info(f"Exception: {e}")
